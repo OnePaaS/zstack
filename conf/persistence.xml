@@ -103,5 +103,16 @@
         <class>org.zstack.storage.primary.iscsi.IscsiIsoVO</class>
         <class>org.zstack.storage.primary.local.LocalStorageResourceRefVO</class>
         <class>org.zstack.storage.primary.local.LocalStorageHostRefVO</class>
+        <class>org.zstack.storage.ceph.backup.CephBackupStorageVO</class>
+        <class>org.zstack.storage.ceph.backup.CephBackupStorageMonVO</class>
+        <class>org.zstack.storage.ceph.primary.CephPrimaryStorageMonVO</class>
+        <class>org.zstack.storage.ceph.primary.CephPrimaryStorageVO</class>
+        <class>org.zstack.storage.ceph.CephCapacityVO</class>
+        <class>org.zstack.core.gc.GarbageCollectorVO</class>
+        <class>org.zstack.header.storage.primary.ImageCacheVolumeRefVO</class>
+        <class>org.zstack.network.service.virtualrouter.lb.VirtualRouterLoadBalancerRefVO</class>
+        <class>org.zstack.network.service.lb.LoadBalancerVO</class>
+        <class>org.zstack.network.service.lb.LoadBalancerVmNicRefVO</class>
+        <class>org.zstack.network.service.lb.LoadBalancerListenerVO</class>
     </persistence-unit>
 </persistence>

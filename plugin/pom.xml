@@ -21,6 +21,8 @@
         <module>mediator</module>
         <module>iscsiPrimaryStorage</module>
         <module>localstorage</module>
+        <module>ceph</module>
+        <module>loadBalancer</module>
     </modules>
     <dependencies>
         <dependency>

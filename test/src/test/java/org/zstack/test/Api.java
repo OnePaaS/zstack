@@ -61,15 +61,17 @@ import org.zstack.kvm.KVMHostInventory;
 import org.zstack.network.securitygroup.*;
 import org.zstack.network.securitygroup.APIAddSecurityGroupRuleMsg.SecurityGroupRuleAO;
 import org.zstack.network.service.eip.*;
+import org.zstack.network.service.lb.*;
 import org.zstack.network.service.portforwarding.*;
 import org.zstack.network.service.vip.*;
-import org.zstack.network.service.virtualrouter.APIReconnectVirtualRouterEvent;
-import org.zstack.network.service.virtualrouter.APIReconnectVirtualRouterMsg;
+import org.zstack.network.service.virtualrouter.*;
 import org.zstack.portal.managementnode.ManagementNodeManager;
 import org.zstack.storage.backup.sftp.APIReconnectSftpBackupStorageEvent;
 import org.zstack.storage.backup.sftp.APIReconnectSftpBackupStorageMsg;
 import org.zstack.storage.backup.sftp.APIUpdateSftpBackupStorageMsg;
 import org.zstack.storage.backup.sftp.SftpBackupStorageInventory;
+import org.zstack.storage.ceph.backup.*;
+import org.zstack.storage.ceph.primary.*;
 import org.zstack.storage.primary.iscsi.APIUpdateIscsiFileSystemBackendPrimaryStorageMsg;
 import org.zstack.storage.primary.iscsi.IscsiFileSystemBackendPrimaryStorageInventory;
 import org.zstack.utils.CollectionUtils;
@@ -3210,6 +3212,47 @@ public class Api implements CloudBusEventListener {
         return evt.getInventory();
     }
 
+    public VirtualRouterOfferingInventory createVirtualRouterOffering(VirtualRouterOfferingInventory inv) throws ApiSenderException {
+        return createVirtualRouterOffering(inv, null);
+    }
+
+    public VirtualRouterOfferingInventory createVirtualRouterOffering(VirtualRouterOfferingInventory inv, SessionInventory session) throws ApiSenderException {
+        APICreateVirtualRouterOfferingMsg msg = new APICreateVirtualRouterOfferingMsg();
+        msg.setName(inv.getName());
+        msg.setDescription(inv.getDescription());
+        msg.setPublicNetworkUuid(inv.getPublicNetworkUuid());
+        msg.setManagementNetworkUuid(inv.getManagementNetworkUuid());
+        msg.setZoneUuid(inv.getZoneUuid());
+        msg.setImageUuid(inv.getImageUuid());
+        msg.setDefault(inv.isDefault());
+        msg.setCpuSpeed(inv.getCpuSpeed());
+        msg.setCpuNum(inv.getCpuNum());
+        msg.setAllocatorStrategy(inv.getAllocatorStrategy());
+        msg.setMemorySize(inv.getMemorySize());
+        msg.setSession(session == null ? adminSession : session);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APICreateInstanceOfferingEvent evt = sender.send(msg, APICreateInstanceOfferingEvent.class);
+        return (VirtualRouterOfferingInventory) evt.getInventory();
+    }
+
+    public VirtualRouterOfferingInventory updateVirtualRouterOffering(VirtualRouterOfferingInventory offering) throws ApiSenderException {
+        return updateVirtualRouterOffering(offering, null);
+    }
+
+    public VirtualRouterOfferingInventory updateVirtualRouterOffering(VirtualRouterOfferingInventory offering, SessionInventory session) throws ApiSenderException {
+        APIUpdateVirtualRouterOfferingMsg msg = new APIUpdateVirtualRouterOfferingMsg();
+        msg.setSession(session == null ? adminSession : session);
+        msg.setUuid(offering.getUuid());
+        msg.setName(offering.getName());
+        msg.setDescription(offering.getDescription());
+        msg.setIsDefault(offering.isDefault());
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIUpdateInstanceOfferingEvent evt = sender.send(msg, APIUpdateInstanceOfferingEvent.class);
+        return (VirtualRouterOfferingInventory) evt.getInventory();
+    }
+
     public InstanceOfferingInventory updateInstanceOffering(InstanceOfferingInventory inv) throws ApiSenderException {
         return updateInstanceOffering(inv, null);
     }
@@ -3344,5 +3387,127 @@ public class Api implements CloudBusEventListener {
         ApiSender sender = new ApiSender();
         sender.setTimeout(timeout);
         sender.send(msg, APIShareResourceEvent.class);
+    }
+
+    public CephBackupStorageInventory addMonToCephBackupStorage(String bsUuid, List<String> monUrls) throws ApiSenderException {
+        APIAddMonToCephBackupStorageMsg msg = new APIAddMonToCephBackupStorageMsg();
+        msg.setUuid(bsUuid);
+        msg.setMonUrls(monUrls);
+        msg.setSession(adminSession);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIAddMonToCephBackupStorageEvent evt = sender.send(msg, APIAddMonToCephBackupStorageEvent.class);
+        return evt.getInventory();
+    }
+
+    public CephPrimaryStorageInventory addMonToCephPrimaryStorage(String psUuid, List<String> monUrls) throws ApiSenderException {
+        APIAddMonToCephPrimaryStorageMsg msg = new APIAddMonToCephPrimaryStorageMsg();
+        msg.setUuid(psUuid);
+        msg.setMonUrls(monUrls);
+        msg.setSession(adminSession);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIAddMonToCephPrimaryStorageEvent evt = sender.send(msg, APIAddMonToCephPrimaryStorageEvent.class);
+        return evt.getInventory();
+    }
+
+    public CephBackupStorageInventory removeMonFromBackupStorage(String bsUuid, List<String> hostnames) throws ApiSenderException {
+        APIRemoveMonFromCephBackupStorageMsg msg = new APIRemoveMonFromCephBackupStorageMsg();
+        msg.setUuid(bsUuid);
+        msg.setMonHostnames(hostnames);
+        msg.setSession(adminSession);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIRemoveMonFromCephBackupStorageEvent evt = sender.send(msg, APIRemoveMonFromCephBackupStorageEvent.class);
+        return evt.getInventory();
+    }
+
+    public CephPrimaryStorageInventory removeMonFromPrimaryStorage(String psUuid, List<String> hostnames) throws ApiSenderException {
+        APIRemoveMonFromCephPrimaryStorageMsg msg = new APIRemoveMonFromCephPrimaryStorageMsg();
+        msg.setUuid(psUuid);
+        msg.setMonHostnames(hostnames);
+        msg.setSession(adminSession);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIRemoveMonFromCephPrimaryStorageEvent evt = sender.send(msg, APIRemoveMonFromCephPrimaryStorageEvent.class);
+        return evt.getInventory();
+    }
+
+    public LoadBalancerInventory createLoadBalancer(String name, String vipUuid, List<String> tags, SessionInventory session) throws ApiSenderException {
+        APICreateLoadBalancerMsg msg = new APICreateLoadBalancerMsg();
+        msg.setName(name);
+        msg.setVipUuid(vipUuid);
+        msg.setSystemTags(tags);
+        msg.setSession(session == null ? adminSession : session);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APICreateLoadBalancerEvent evt = sender.send(msg, APICreateLoadBalancerEvent.class);
+        return evt.getInventory();
+    }
+
+    public LoadBalancerInventory createLoadBalancerListener(LoadBalancerListenerInventory inv, SessionInventory session) throws ApiSenderException {
+        return createLoadBalancerListener(inv, null, session);
+    }
+
+    public LoadBalancerInventory createLoadBalancerListener(LoadBalancerListenerInventory inv, List<String> sysTags,  SessionInventory session) throws ApiSenderException {
+        APICreateLoadBalancerListenerMsg msg = new APICreateLoadBalancerListenerMsg();
+        msg.setResourceUuid(inv.getUuid());
+        msg.setLoadBalancerUuid(inv.getLoadBalancerUuid());
+        msg.setName(inv.getName());
+        msg.setDescription(inv.getDescription());
+        msg.setInstancePort(inv.getInstancePort());
+        msg.setLoadBalancerPort(inv.getLoadBalancerPort());
+        msg.setProtocol(inv.getProtocol());
+        msg.setSession(session == null ? adminSession : session);
+        msg.setSystemTags(sysTags);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APICreateLoadBalancerListenerEvent evt = sender.send(msg, APICreateLoadBalancerListenerEvent.class);
+        return evt.getInventory();
+    }
+
+    public LoadBalancerInventory addVmNicToLoadBalancer(String lbUuid, String nicUuid) throws ApiSenderException {
+        return addVmNicToLoadBalancer(lbUuid, nicUuid, null);
+    }
+
+    public LoadBalancerInventory addVmNicToLoadBalancer(String lbUuid, String nicUuid, SessionInventory session) throws ApiSenderException {
+        APIAddVmNicToLoadBalancerMsg msg = new APIAddVmNicToLoadBalancerMsg();
+        msg.setVmNicUuid(nicUuid);
+        msg.setLoadBalancerUuid(lbUuid);
+        msg.setSession(session == null ? adminSession : session);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIAddVmNicToLoadBalancerEvent evt = sender.send(msg, APIAddVmNicToLoadBalancerEvent.class);
+        return evt.getInventory();
+    }
+
+    public LoadBalancerInventory removeNicFromLoadBalancer(String lbUuid, String nicUuid, SessionInventory session) throws ApiSenderException {
+        APIRemoveNicFromLoadBalancerMsg msg = new APIRemoveNicFromLoadBalancerMsg();
+        msg.setLoadBalancerUuid(lbUuid);
+        msg.setVmNicUuid(nicUuid);
+        msg.setSession(session == null ? adminSession : session);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIRemoveNicFromLoadBalancerEvent evt = sender.send(msg, APIRemoveNicFromLoadBalancerEvent.class);
+        return evt.getInventory();
+    }
+
+    public LoadBalancerInventory deleteLoadBalancerListener(String uuid, SessionInventory session) throws ApiSenderException {
+        APIDeleteLoadBalancerListenerMsg msg = new APIDeleteLoadBalancerListenerMsg();
+        msg.setListenerUuid(uuid);
+        msg.setSession(session == null ? adminSession : session);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        APIDeleteLoadBalancerListenerEvent evt = sender.send(msg, APIDeleteLoadBalancerListenerEvent.class);
+        return evt.getInventory();
+    }
+
+    public void deleteLoadBalancer(String lbUuid, SessionInventory session) throws ApiSenderException {
+        APIDeleteLoadBalancerMsg msg = new APIDeleteLoadBalancerMsg();
+        msg.setUuid(lbUuid);
+        msg.setSession(session == null ? adminSession : session);
+        ApiSender sender = new ApiSender();
+        sender.setTimeout(timeout);
+        sender.send(msg, APIDeleteLoadBalancerEvent.class);
     }
 }

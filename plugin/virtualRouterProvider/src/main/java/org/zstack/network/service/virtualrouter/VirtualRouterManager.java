@@ -28,10 +28,15 @@ public interface VirtualRouterManager {
 
     void acquireVirtualRouterVm(L3NetworkInventory l3Nw, VirtualRouterOfferingValidator vrOfferingValidator, ReturnValueCompletion<VirtualRouterVmInventory> completion);
 
+    void acquireVirtualRouterVm(VirtualRouterStruct struct, ReturnValueCompletion<VirtualRouterVmInventory> completion);
 
     VirtualRouterVmInventory getVirtualRouterVm(L3NetworkInventory l3Nw);
 
     boolean isVirtualRouterRunningForL3Network(String l3Uuid);
+
+    long countVirtualRouterRunningForL3Network(String l3Uuid);
+
+    boolean isVirtualRouterForL3Network(String l3Uuid);
 
     VirtualRouterOfferingInventory findOfferingByGuestL3Network(L3NetworkInventory guestL3);
 

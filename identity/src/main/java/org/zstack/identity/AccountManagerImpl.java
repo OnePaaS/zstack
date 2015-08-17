@@ -9,7 +9,6 @@ import org.zstack.core.Platform;
 import org.zstack.core.cloudbus.CloudBus;
 import org.zstack.core.cloudbus.MessageSafe;
 import org.zstack.core.componentloader.PluginRegistry;
-import org.zstack.core.config.GlobalConfigFacade;
 import org.zstack.core.config.GlobalConfigVO;
 import org.zstack.core.config.GlobalConfigVO_;
 import org.zstack.core.db.*;
@@ -74,8 +73,6 @@ public class AccountManagerImpl extends AbstractService implements AccountManage
     private ThreadFacade thdf;
     @Autowired
     private PluginRegistry pluginRgty;
-    @Autowired
-    private GlobalConfigFacade gcf;
 
     private List<String> resourceTypeForAccountRef;
     private List<Class> resourceTypes;
@@ -116,6 +113,11 @@ public class AccountManagerImpl extends AbstractService implements AccountManage
         } else {
             bus.dealWithUnknownMessage(msg);
         }
+    }
+
+    @Override
+    public Map<Class, Quota> getMessageQuotaMap() {
+        return messageQuotaMap;
     }
 
     private void handle(GenerateMessageIdentityCategoryMsg msg) {
@@ -720,8 +722,8 @@ public class AccountManagerImpl extends AbstractService implements AccountManage
         }
 
         private void accountFieldCheck() throws IllegalAccessException {
-            List resourceUuids = new ArrayList();
-            List operationTargetResourceUuids = new ArrayList();
+            Set resourceUuids = new HashSet();
+            Set operationTargetResourceUuids = new HashSet();
 
             for (AccountCheckField af : action.accountCheckFields) {
                 Object value = af.field.get(msg);
@@ -844,8 +846,6 @@ public class AccountManagerImpl extends AbstractService implements AccountManage
                 }
             }
 
-            quotaCheck();
-
             if (session.isAccountSession()) {
                 return;
             }
@@ -875,41 +875,6 @@ public class AccountManagerImpl extends AbstractService implements AccountManage
             ));
         }
 
-        private void quotaCheck() {
-            Quota quota = messageQuotaMap.get(msg.getClass());
-            if (quota == null) {
-                return;
-            }
-            
-            Map<String, QuotaPair> pairs = makeQuotaPairs(quota);
-            quota.getChecker().checkQuota(msg, pairs);
-        }
-
-        private Map<String, QuotaPair> makeQuotaPairs(Quota quota) {
-            List<String> names = new ArrayList<String>();
-            for (QuotaPair p : quota.getQuotaPairs()) {
-                names.add(p.getName());
-            }
-
-            SimpleQuery<QuotaVO> q = dbf.createQuery(QuotaVO.class);
-            q.select(QuotaVO_.name, QuotaVO_.value);
-            q.add(QuotaVO_.identityType, Op.EQ, AccountVO.class.getSimpleName());
-            q.add(QuotaVO_.identityUuid, Op.EQ, session.getAccountUuid());
-            q.add(QuotaVO_.name, Op.IN, names);
-            List<Tuple> ts = q.listTuple();
-
-            Map<String, QuotaPair> pairs = new HashMap<String, QuotaPair>();
-            for (Tuple t : ts) {
-                String name = t.get(0, String.class);
-                long value = t.get(1, Long.class);
-                QuotaPair p = new QuotaPair();
-                p.setName(name);
-                p.setValue(value);
-                pairs.put(name, p);
-            }
-
-            return pairs;
-        }
 
         @Transactional(readOnly = true)
         private List<PolicyInventory> getGroupPolicies() {

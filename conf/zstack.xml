@@ -44,6 +44,7 @@
     <import resource="springConfigXml/HostManager.xml" />
     <import resource="springConfigXml/ImageManager.xml" />
     <import resource="springConfigXml/JobQueueFacade.xml" />
+    <import resource="springConfigXml/gc.xml" />
     <import resource="springConfigXml/Kvm.xml" />
     <import resource="springConfigXml/ManagementNodeManager.xml" />
     <import resource="springConfigXml/NetworkManager.xml" />
@@ -75,4 +76,6 @@
     <import resource="springConfigXml/jmx.xml" />
     <import resource="springConfigXml/iscsiBtrfsPrimaryStorage.xml" />
     <import resource="springConfigXml/localStorage.xml" />
+    <import resource="springConfigXml/ceph.xml" />
+    <import resource="springConfigXml/lb.xml" />
 </beans>
