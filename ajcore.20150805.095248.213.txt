@@ -1,0 +1,1629 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.11 built on Tuesday Mar 15, 2011 at 15:31:04 GMT
+---- Dump Properties ---
+Dump file: ajcore.20150805.095248.213.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:257)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.patterns.TypePattern.matchesSubtypes(TypePattern.java:178)
+	at org.aspectj.weaver.patterns.ExactTypePattern.matchesSubtypes(ExactTypePattern.java:74)
+	at org.aspectj.weaver.patterns.TypePattern.matchesStatically(TypePattern.java:130)
+	at org.aspectj.weaver.patterns.DeclareParents.match(DeclareParents.java:63)
+	at org.aspectj.weaver.patterns.DeclareParents.findMatchingNewParents(DeclareParents.java:358)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doDeclareParents(AjLookupEnvironment.java:880)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:730)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+---- System Properties ---
+idea.version=14.1.1
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_40\jre\bin
+java.vm.version=25.40-b25
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=;
+idea.launcher.port=7532
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=CN
+user.script=
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=Service Pack 1
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=D:\opensource\zstack
+java.runtime.version=1.8.0_40-b25
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_40\jre\lib\endorsed
+os.arch=amd64
+java.io.tmpdir=C:\Users\heidsoft\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows 7
+classworlds.conf=D:\Program Files (x86)\JetBrains\IntelliJ IDEA 14.1.1\plugins\maven\lib\maven3\bin\m2.conf
+sun.jnu.encoding=GBK
+java.library.path=C:\Program Files\Java\jdk1.8.0_40\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\NetSarang;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Java\jdk1.8.0_40\bin;C:\Program Files\TortoiseSVN\bin;D:\devtool\gradle-2.3\bin;D:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\nodejs\;D:\devtool\apache-maven-3.2.5\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Go\bin;C:\HashiCorp\Vagrant\bin;C:\Users\heidsoft\AppData\Roaming\npm\node_modules\grunt-cli\bin;D:\Program Files\MongoDB\Server\3.0\bin;C:\Users\heidsoft\AppData\Roaming\npm;C:\Program Files\Boot2Docker for Windows;.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+skipTests=true
+os.version=6.1
+user.home=C:\Users\heidsoft
+user.timezone=Asia/Shanghai
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=GBK
+idea.launcher.bin.path=D:\Program Files (x86)\JetBrains\IntelliJ IDEA 14.1.1\bin
+java.specification.version=1.8
+java.class.path=D:\Program Files (x86)\JetBrains\IntelliJ IDEA 14.1.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.4.jar;D:\Program Files (x86)\JetBrains\IntelliJ IDEA 14.1.1\lib\idea_rt.jar
+user.name=heidsoft
+java.vm.specification.version=1.8
+sun.java.command=com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=14.1.1 -DskipTests=true install -P debug
+java.home=C:\Program Files\Java\jdk1.8.0_40\jre
+sun.arch.data.model=64
+user.language=zh
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_40
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_40\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_40\jre\classes
+java.vendor=Oracle Corporation
+maven.home=D:\Program Files (x86)\JetBrains\IntelliJ IDEA 14.1.1\plugins\maven\lib\maven3
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.desktop=windows
+sun.cpu.isalist=amd64
+---- Command Line ---
+-XnoInline
+-encoding
+UTF-8
+-source
+1.6
+-target
+1.6
+-verbose
+-classpath
+C:\Users\heidsoft\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\heidsoft\.m2\repository\com\rabbitmq\amqp-client\3.2.1\amqp-client-3.2.1.jar;C:\Users\heidsoft\.m2\repository\org\springframework\security\spring-security-core\3.2.3.RELEASE\spring-security-core-3.2.3.RELEASE.jar;C:\Users\heidsoft\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-aspects\4.0.3.RELEASE\spring-aspects-4.0.3.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-tx\4.0.3.RELEASE\spring-tx-4.0.3.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\aspectj\aspectjrt\1.6.12\aspectjrt-1.6.12.jar;C:\Users\heidsoft\.m2\repository\org\aspectj\aspectjweaver\1.6.12\aspectjweaver-1.6.12.jar;D:\opensource\zstack\utils\target\utils-0.8.0.jar;C:\Users\heidsoft\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-aop\4.0.3.RELEASE\spring-aop-4.0.3.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-beans\3.2.8.RELEASE\spring-beans-3.2.8.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-context\4.0.3.RELEASE\spring-context-4.0.3.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-core\3.2.8.RELEASE\spring-core-3.2.8.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-expression\3.2.8.RELEASE\spring-expression-3.2.8.RELEASE.jar;C:\Users\heidsoft\.m2\repository\junit\junit\4.10\junit-4.10.jar;C:\Users\heidsoft\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar;C:\Users\heidsoft\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\heidsoft\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;C:\Users\heidsoft\.m2\repository\commons-configuration\commons-configuration\1.8\commons-configuration-1.8.jar;C:\Users\heidsoft\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\heidsoft\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\heidsoft\.m2\repository\com\google\code\gson\gson\2.1\gson-2.1.jar;C:\Users\heidsoft\.m2\repository\org\springframework\spring-web\4.0.3.RELEASE\spring-web-4.0.3.RELEASE.jar;C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-api\2.1\log4j-api-2.1.jar;C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-core\2.1\log4j-core-2.1.jar;C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-web\2.1\log4j-web-2.1.jar;C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-1.2-api\2.1\log4j-1.2-api-2.1.jar;C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.1\log4j-slf4j-impl-2.1.jar;C:\Users\heidsoft\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar;C:\Users\heidsoft\.m2\repository\org\codehaus\groovy\groovy\2.2.2\groovy-2.2.2.jar;C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-tree\4.1\asm-tree-4.1.jar;C:\Users\heidsoft\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-util\4.1\asm-util-4.1.jar;C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-commons\4.1\asm-commons-4.1.jar;C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm\4.1\asm-4.1.jar;C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-analysis\4.1\asm-analysis-4.1.jar;C:\Users\heidsoft\.m2\repository\org\json\json\20090211\json-20090211.jar;C:\Users\heidsoft\.m2\repository\com\google\guava\guava\15.0\guava-15.0.jar;C:\Users\heidsoft\.m2\repository\com\googlecode\gentyref\gentyref\1.1.0\gentyref-1.1.0.jar;C:\Users\heidsoft\.m2\repository\net\schmizz\sshj\0.8.1\sshj-0.8.1.jar;C:\Users\heidsoft\.m2\repository\org\bouncycastle\bcprov-jdk16\1.46\bcprov-jdk16-1.46.jar;C:\Users\heidsoft\.m2\repository\commons-net\commons-net\3.3\commons-net-3.3.jar;C:\Users\heidsoft\.m2\repository\commons-validator\commons-validator\1.4.0\commons-validator-1.4.0.jar;C:\Users\heidsoft\.m2\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;C:\Users\heidsoft\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;D:\opensource\zstack\header\target\classes
+-aspectpath
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-aspects\4.0.3.RELEASE\spring-aspects-4.0.3.RELEASE.jar
+-d
+D:\opensource\zstack\header\target\classes
+D:\opensource\zstack\header\src\main\java\org\zstack\header\AbstractService.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\agent\AgentCommand.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\agent\AgentResponse.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\AbstractHostAllocatorFlow.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\AllocateHostDryRunReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\AllocateHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\AllocateHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\AllocateHostSpec.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\APIGetCpuMemoryCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\APIGetCpuMemoryCapacityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\APIGetHostAllocatorStrategiesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\APIGetHostAllocatorStrategiesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\CloudNoAvailableHostException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\CloudUnableToReserveCapacityException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\DesignatedAllocateHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\DiskOfferingTagAllocatorExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocationPaginationInfo.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorChain.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorError.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorFilterExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorSpec.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorStrategy.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorStrategyFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorStrategyType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostAllocatorTrigger.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostCapacityInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostCapacityVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostCapacityVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\HostReservedCapacityExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\InstanceOfferingTagAllocatorExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\LastHostPreferredAllocateHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\ReservedHostCapacity.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\allocator\ReturnHostCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\APIIsReadyToGoMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\APIIsReadyToGoReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\ApiMediatorConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\ApiMessageInterceptionException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\ApiMessageInterceptor.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\ApiMessageRouter.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\CloudApiMessageInterceptorException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\CloudNoRouteFoundException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\GlobalApiMessageInterceptor.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\PortalErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\apimediator\StopRoutingException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIChangeClusterStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIChangeClusterStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APICreateClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APICreateClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIDeleteClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIDeleteClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIGetClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIGetClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIListClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIListClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIQueryClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIQueryClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APISearchClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APISearchClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIUpdateClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\APIUpdateClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ChangeClusterStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ChangeClusterStateReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\Cluster.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterChangeStateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterEO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterMigrateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ClusterVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\DeleteClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\DeleteClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\ReportHostCapacityMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\StopClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\cluster\StopClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\Component.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIChangeDiskOfferingStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIChangeDiskOfferingStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIChangeInstanceOfferingStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIChangeInstanceOfferingStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APICreateDiskOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APICreateDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APICreateInstanceOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APICreateInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIDeleteDiskOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIDeleteDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIDeleteInstanceOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIDeleteInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateApiJsonTemplateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateApiJsonTemplateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateApiTypeScriptDefinitionEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateApiTypeScriptDefinitionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateGroovyClassEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateGroovyClassMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateSqlForeignKeyEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateSqlForeignKeyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateSqlIndexEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateSqlIndexMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateSqlVOViewEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateSqlVOViewMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateTestLinkDocumentEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGenerateTestLinkDocumentMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGetDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGetDiskOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGetGlobalPropertyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGetGlobalPropertyReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGetInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIGetInstanceOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIListDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIListDiskOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIListInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIListInstanceOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIQueryDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIQueryDiskOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIQueryInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIQueryInstanceOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APISearchDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APISearchDiskOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APISearchDnsMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APISearchDnsReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APISearchInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APISearchInstanceOfferingReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIUpdateDiskOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIUpdateDiskOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIUpdateInstanceOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\APIUpdateInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\ConfigurationConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOffering.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\DiskOfferingVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOffering.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingDuration.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\InstanceOfferingVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\NoPython.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\PythonAction.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\PythonApiBindingWriter.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\PythonClass.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\configuration\PythonClassInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\APIRequestConsoleAccessEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\APIRequestConsoleAccessMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleBackend.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleConstants.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleHypervisorBackend.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleProxy.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleProxyCommands.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleProxyInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleProxyStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleProxyVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\console\ConsoleProxyVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\AbstractCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\AbstractCompositeType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\AsyncBackup.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\Completion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\FutureCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\FutureReturnValueCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\keyvalue\KeyValueEntity.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\NoErrorCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\NopeCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\NopeReturnValueCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\ReturnValueCompletion.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\validation\Validation.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\validation\Validator.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\Flow.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\FlowChain.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\FlowDoneHandler.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\FlowErrorHandler.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\FlowException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\FlowMarshaller.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\FlowTrigger.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\core\workflow\NoRollbackFlow.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\errorcode\ErrorCode.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\errorcode\OperationFailureException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\errorcode\SysErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudConfigureFailException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudFactoryFailureException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudInvalidParameterException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudOperationError.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudPluginMissDependencyException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudResourceUnmanagedException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudRuntimeException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\CloudStateMachineException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\exception\SerialVersionUID.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\AbstractHostAddExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIAddHostEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIAddHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIChangeHostStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIChangeHostStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIDeleteHostEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIDeleteHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIGetHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIGetHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIGetHypervisorTypesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIGetHypervisorTypesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIListHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIListHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIQueryHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIQueryHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIReconnectHostEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIReconnectHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APISearchHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APISearchHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIUpdateHostEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\APIUpdateHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\AttachNicToVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\AttachNicToVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ChangeHostConnectionStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ChangeHostConnectionStateReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ChangeHostStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ChangeHostStateReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ConnectHostInfo.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ConnectHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ConnectHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\DeleteHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\DeleteHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\DetachNicFromVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\DetachNicFromVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\Host.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostAddExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostChangeStateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostConnectionReestablishExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostEO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostMessageHandlerExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostPingTaskExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostStatusChangedEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostStatusChangeNotifyPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostStatusEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HostVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HypervisorFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\HypervisorType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\MigrateVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\MigrateVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\PingHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\PingHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ReconnectHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\ReconnectHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\RemovePingTaskMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\TakeSnapshotOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\host\TakeSnapshotOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountResourceRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountResourceRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountResourceRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AccountVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\Action.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIAddUserToGroupEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIAddUserToGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIAttachPolicyToUserEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIAttachPolicyToUserGroupEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIAttachPolicyToUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIAttachPolicyToUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreateAccountEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreateAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreatePolicyEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreatePolicyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreateUserEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreateUserGroupEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreateUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APICreateUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeleteAccountEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeleteAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeletePolicyEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeletePolicyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeleteUserEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeleteUserGroupEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeleteUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDeleteUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDetachPolicyFromUserEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDetachPolicyFromUserGroupEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDetachPolicyFromUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIDetachPolicyFromUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetAccountReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetPolicyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetPolicyReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetUserGroupReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIGetUserReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIListAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIListAccountReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIListPolicyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIListPolicyReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIListUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIListUserReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APILogInByAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APILogInByUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APILogInReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APILogOutMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APILogOutReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryAccountReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryPolicyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryPolicyReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryQuotaMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryQuotaReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryUserGroupReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIQueryUserReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIRemoveUserFromGroupEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIRemoveUserFromGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIRevokeResourceSharingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIRevokeResourceSharingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchAccountReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchPolicyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchPolicyReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchUserGroupMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchUserGroupReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISearchUserReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APISessionMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIShareResourceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIShareResourceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIUpdateAccountEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIUpdateAccountMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIUpdateQuotaEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIUpdateQuotaMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIUpdateUserEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIUpdateUserMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIValidateSessionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\APIValidateSessionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\AuthorizationInfo.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\CredentialDeniedException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\CurrentDateVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\GenerateMessageIdentityCategoryMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\GenerateMessageIdentityCategoryReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\IdentityErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\IdentityRoles.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\NeedRoles.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\OwnerUuid.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\PolicyInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\PolicyType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\PolicyVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\PolicyVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\Quota.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\QuotaInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\QuotaVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\QuotaVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\ReportQuotaExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\SessionInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\SessionVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\SessionVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\SharedResourceVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\SharedResourceVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\SuppressCredentialCheck.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupPolicyRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupPolicyRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupPolicyRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupUserRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupUserRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupUserRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserGroupVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserPolicyRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserPolicyRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserPolicyRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\identity\UserVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIAddImageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIAddImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIChangeImageStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIChangeImageStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APICreateDataVolumeTemplateFromVolumeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APICreateDataVolumeTemplateFromVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APICreateRootVolumeTemplateFromRootVolumeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APICreateRootVolumeTemplateFromRootVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APICreateRootVolumeTemplateFromVolumeSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APICreateRootVolumeTemplateFromVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIDeleteImageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIDeleteImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIGetImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIGetImageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIListImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIListImageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIQueryImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIQueryImageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APISearchImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APISearchImageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIUpdateImageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\APIUpdateImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\Image.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageBackupStorageRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageBackupStorageRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageBackupStorageRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageDeletionStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImagePlatform.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\image\ImageVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\APIListManagementNodeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\APIListManagementNodeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\APIQueryManagementNodeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\APIQueryManagementNodeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\IsManagementNodeReadyMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\IsManagementNodeReadyReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeChangeListener.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeContextInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeContextVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeExitMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeJoinEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeLeftAckMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeLeftEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\ManagementNodeVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\managementnode\PrepareDbInitialValueExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APICreateMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APIDeleteMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APIEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APIListMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APIMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APIParam.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APIReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\APISyncCallMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\ControlMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\DeletionMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\Event.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\GsonTransient.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\LocalEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\LockResourceMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\LockResourceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\Message.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\MessageHandlerExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\MessageProperties.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\MessageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\NeedJsonSchema.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\NeedReplyMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\message\NoJsonSchema.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIAttachL2NetworkToClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIAttachL2NetworkToClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APICreateL2NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APICreateL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APICreateL2NoVlanNetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APICreateL2VlanNetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APICreateL2VlanNetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIDeleteL2NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIDeleteL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIDetachL2NetworkFromClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIDetachL2NetworkFromClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIGetL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIGetL2NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIGetL2NetworkTypesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIGetL2NetworkTypesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIGetL2VlanNetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIGetL2VlanNetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIListL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIListL2NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIListL2VlanNetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIListL2VlanNetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIQueryL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIQueryL2NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIQueryL2VlanNetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIQueryL2VlanNetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APISearchL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APISearchL2NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APISearchL2VlanNetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APISearchL2VlanNetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIUpdateL2NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\APIUpdateL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\CheckL2NetworkOnHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\CheckL2NetworkOnHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\CheckNetworkPhysicalInterfaceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\CheckNetworkPhysicalInterfaceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\DetachL2NetworkFromClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\DetachL2NetworkFromClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2Errors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2Network.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkClusterRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkClusterRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkClusterRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkCreateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkDetachStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkRealizationExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2NetworkVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2VlanNetworkInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2VlanNetworkVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\L2VlanNetworkVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\PrepareL2NetworkOnHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l2\PrepareL2NetworkOnHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\AllocateIpMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\AllocateIpReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIAddDnsToL3NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIAddDnsToL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIAddIpRangeByNetworkCidrEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIAddIpRangeByNetworkCidrMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIAddIpRangeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIAddIpRangeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIChangeL3NetworkStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIChangeL3NetworkStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APICreateL3NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APICreateL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIDeleteIpRangeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIDeleteIpRangeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIDeleteL3NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIDeleteL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetFreeIpMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetFreeIpReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetIpAddressCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetIpAddressCapacityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetL3NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetL3NetworkTypesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIGetL3NetworkTypesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIListIpRangeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIListIpRangeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIListL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIListL3NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIQueryIpRangeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIQueryIpRangeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIQueryL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIQueryL3NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIRemoveDnsFromL3NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIRemoveDnsFromL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APISearchL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APISearchL3NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIUpdateIpRangeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIUpdateIpRangeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIUpdateL3NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\APIUpdateL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\FreeIpInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpAllocateMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpAllocatorStrategy.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpAllocatorType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpRangeVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpUseInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpUseVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\IpUseVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3Errors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3Network.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDnsInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDnsRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDnsVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkDnsVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkEO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\L3NetworkVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\ReturnIpMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\ReturnIpReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\UsedIpInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\UsedIpVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\l3\UsedIpVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\NetworkException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIAddNetworkServiceProviderEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIAddNetworkServiceProviderMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIAttachNetworkServiceProviderToL2NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIAttachNetworkServiceProviderToL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIAttachNetworkServiceToL3NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIAttachNetworkServiceToL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIDetachNetworkServiceProviderFromL2NetworkEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIDetachNetworkServiceProviderFromL2NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIGetNetworkServiceProviderMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIGetNetworkServiceProviderReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIGetNetworkServiceTypesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIGetNetworkServiceTypesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIListNetworkServiceProviderMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIListNetworkServiceProviderReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIQueryNetworkServiceL3NetworkRefMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIQueryNetworkServiceL3NetworkRefReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIQueryNetworkServiceProviderMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APIQueryNetworkServiceProviderReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APISearchNetworkServiceProviderMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\APISearchNetworkServiceProviderReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\ApplyNetworkServiceExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\DhcpStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\DnsStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceDhcpBackend.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceDnsBackend.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceL3NetworkRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceL3NetworkRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceL3NetworkRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProvider.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderL2NetworkRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderL2NetworkRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderL2NetworkRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceProviderVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceSnatBackend.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceTypeInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceTypeVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\NetworkServiceTypeVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\network\service\SnatStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\AddExpandedQueryExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\AddExtraConditionToQueryExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\APIGenerateInventoryQueryDetailsEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\APIGenerateInventoryQueryDetailsMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\APIGenerateQueryableFieldsEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\APIGenerateQueryableFieldsMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\APIQueryMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\APIQueryReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\AutoQuery.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\ExpandedQueries.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\ExpandedQuery.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\ExpandedQueryAlias.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\ExpandedQueryAliases.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\ExpandedQueryAliasStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\ExpandedQueryStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\Queryable.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\QueryBuilder.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\QueryBuilderFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\QueryBuilderType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\QueryCondition.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\QueryOp.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\query\Unqueryable.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\APINoSee.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\AsyncRESTCallback.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\HttpCallStatistic.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\JsonAsyncRESTCallback.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RESTApiFacade.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RestAPIResponse.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RestAPIState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RestAPIVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RestAPIVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RESTConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\rest\RESTFacade.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APICreateSearchIndexEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APICreateSearchIndexMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APIDeleteSearchIndexEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APIDeleteSearchIndexMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APIGetMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APIGetReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APISearchGenerateSqlTriggerEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APISearchGenerateSqlTriggerMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APISearchMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\APISearchReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\DeleteVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\DeleteVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\InsertVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\InsertVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\Inventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\InventoryDoc.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\Parent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\SearchConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\SearchIndexRecreateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\SearchOp.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\SqlTrigger.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\SqlTriggers.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\TriggerIndex.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\TypeField.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\UpdateVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\search\UpdateVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\Service.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\AllocateBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\AllocateBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIAddBackupStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIAddBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIAttachBackupStorageToZoneEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIAttachBackupStorageToZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIChangeBackupStorageStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIChangeBackupStorageStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIDeleteBackupStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIDeleteBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIDetachBackupStorageFromZoneEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIDetachBackupStorageFromZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIGetBackupStorageCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIGetBackupStorageCapacityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIGetBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIGetBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIGetBackupStorageTypesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIGetBackupStorageTypesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIListBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIListBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIQueryBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIQueryBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIScanBackupStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIScanBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APISearchBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APISearchBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIUpdateBackupStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\APIUpdateBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\AttachBackupStorageResult.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAllocationSpec.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAllocatorStrategy.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAllocatorStrategyFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAllocatorStrategyType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAskInstallPathMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAskInstallPathReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageAttachExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageChangeStateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageDetachExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageZoneRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageZoneRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\BackupStorageZoneRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ChangeBackupStorageStatusMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ChangeBackupStorageStatusReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ConnectBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ConnectBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\DeleteBitsOnBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\DeleteBitsOnBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\DownloadImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\DownloadImageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\DownloadVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\DownloadVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\PingBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\PingBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ReturnBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ReturnBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\backup\ScanBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\AllocatePrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\AllocatePrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIAddPrimaryStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIAddPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIAttachPrimaryStorageToClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIAttachPrimaryStorageToClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIChangePrimaryStorageStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIChangePrimaryStorageStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIDeletePrimaryStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIDeletePrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIDetachPrimaryStorageFromClusterEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIDetachPrimaryStorageFromClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageAllocatorStrategiesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageAllocatorStrategiesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageCapacityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageTypesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIGetPrimaryStorageTypesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIListPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIListPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIQueryPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIQueryPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIReconnectPrimaryStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIReconnectPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APISearchPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APISearchPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APISyncPrimaryStorageCapacityEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APISyncPrimaryStorageCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIUpdatePrimaryStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\APIUpdatePrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\AskVolumeSnapshotCapabilityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\AskVolumeSnapshotCapabilityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\BackupVolumeSnapshotFromPrimaryStorageToBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\BackupVolumeSnapshotFromPrimaryStorageToBackupStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CloudNoAvailablePrimaryStorageException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CloudUnableToReservePrimaryStorageCapacityException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ConnectPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ConnectPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CreateTemplateFromVolumeOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CreateTemplateFromVolumeOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CreateTemplateFromVolumeSnapshotOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CreateTemplateFromVolumeSnapshotOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CreateVolumeFromVolumeSnapshotOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\CreateVolumeFromVolumeSnapshotOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteBitsOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteBitsOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteIsoFromPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteIsoFromPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteSnapshotOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteSnapshotOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteVolumeOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DeleteVolumeOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DetachPrimaryStorageFromClusterMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DetachPrimaryStorageFromClusterReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DownloadDataVolumeToPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DownloadDataVolumeToPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DownloadIsoToPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\DownloadIsoToPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ImageCacheInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ImageCacheState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ImageCacheVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ImageCacheVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\InstantiateRootVolumeFromTemplateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\InstantiateVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\InstantiateVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\MergeVolumeSnapshotOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\MergeVolumeSnapshotOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAllocationSpec.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAllocatorChain.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAllocatorStrategy.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAllocatorStrategyExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAllocatorStrategyFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAllocatorStrategyType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageAttachExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageCapacityInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageCapacityVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageCapacityVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageChangeStateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageClusterRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageClusterRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageClusterRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageDetachExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageDetachStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageRemoveCachedImageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageRemoveCachedImageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageReportCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageReportCapacityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageReportPhysicalCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageTagAllocatorExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryStorageVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\PrimaryToBackupStorageMediator.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\ReturnPrimaryStorageCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\RevertVolumeFromSnapshotOnPrimaryStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\RevertVolumeFromSnapshotOnPrimaryStorageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\TakePrimaryStorageCapacityMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\TakePrimaryStorageCapacityReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\TakeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\TakeSnapshotReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\primary\VolumeSnapshotCapability.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIBackupVolumeSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIBackupVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIDeleteVolumeSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIDeleteVolumeSnapshotFromBackupStorageEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIDeleteVolumeSnapshotFromBackupStorageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIDeleteVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIGetVolumeSnapshotTreeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIGetVolumeSnapshotTreeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIQueryVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIQueryVolumeSnapshotReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIQueryVolumeSnapshotTreeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIQueryVolumeSnapshotTreeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIRevertVolumeFromSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIRevertVolumeFromSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIUpdateVolumeSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\APIUpdateVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\BackupVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\BackupVolumeSnapshotReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\ChangeVolumeSnapshotStatusMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\ChangeVolumeSnapshotStatusReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\CreateDataVolumeFromVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\CreateDataVolumeFromVolumeSnapshotReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\CreateTemplateFromVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\CreateTemplateFromVolumeSnapshotReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\CreateVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\CreateVolumeSnapshotReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotBackupStorageDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotBackupStorageDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotBackupStorageRefInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotBackupStorageRefVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotBackupStorageRefVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotEO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotPrimaryStorageDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotPrimaryStorageDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotReportPrimaryStorageCapacityUsageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotReportPrimaryStorageCapacityUsageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotResult.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTag.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTree.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeEO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotTreeVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\storage\snapshot\VolumeSnapshotVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APICreateSystemTagEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APICreateSystemTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APICreateTagEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APICreateTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APICreateUserTagEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APICreateUserTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIDeleteTagEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIDeleteTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIQuerySystemTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIQuerySystemTagReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIQueryTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIQueryTagReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIQueryUserTagMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\APIQueryUserTagReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagCreateMessageValidator.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagLifeCycleExtension.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagLifeCycleListener.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagValidator.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\SystemTagVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagDefinition.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagResourceType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\TagType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\UserTagInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\UserTagVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\tag\UserTagVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIAttachL3NetworkToVmEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIAttachL3NetworkToVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIChangeInstanceOfferingEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIChangeInstanceOfferingMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APICreateVmInstanceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APICreateVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIDestroyVmInstanceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIDestroyVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIDetachL3NetworkFromVmEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIDetachL3NetworkFromVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmAttachableDataVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmAttachableDataVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmAttachableL3NetworkMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmAttachableL3NetworkReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmMigrationCandidateHostsMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIGetVmMigrationCandidateHostsReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIListVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIListVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIListVmNicMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIListVmNicReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIMigrateVmEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIMigrateVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIQueryVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIQueryVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIQueryVmNicMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIQueryVmNicReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIRebootVmInstanceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIRebootVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APISearchVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APISearchVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIStartVmInstanceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIStartVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIStopVmInstanceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIStopVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIUpdateVmInstanceEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\APIUpdateVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\AttachDataVolumeToVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\AttachDataVolumeToVmReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\AttachNicToVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\AttachNicToVmReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\AttachVolumeToVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\AttachVolumeToVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\ChangeVmMetaDataMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\ChangeVmMetaDataReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\ChangeVmStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\CreateTemplateFromVmRootVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\CreateTemplateFromVmRootVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\CreateVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\CreateVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DestroyVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DestroyVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DestroyVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DestroyVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DetachDataVolumeFromVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DetachDataVolumeFromVmReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DetachNicFromVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DetachNicFromVmReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DetachVolumeFromVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\DetachVolumeFromVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\GetAttachableVolumeExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\GetVmMigrationTargetHostMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\GetVmMigrationTargetHostReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\InstantiateResourceOnAttachingNicExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\LockVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\LockVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\MarshalVmOperationFlowExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\MigrateVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\MigrateVmReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\PostVmInstantiateResourceExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\PreVmInstantiateResourceExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\RebootVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\RebootVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\RebootVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\RebootVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\ReleaseNetworkServiceOnDetachingNicExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StartNewCreatedVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StartNewCreatedVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StartVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StartVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StartVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StartVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StopVmInstanceMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StopVmInstanceReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StopVmOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StopVmOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\StrangerVmFoundEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmAttachNicMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmAttachNicOnHypervisorMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmAttachNicOnHypervisorReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmAttachNicReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmAttachVolumeExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmBeforeCreateOnHypervisorExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmBeforeStartOnHypervisorExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmDetachNicExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmDetachVolumeExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmErrors.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstance.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceDestroyExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceEO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceMigrateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceRebootExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceSequenceNumberVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceSpec.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceStartExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceStartNewCreatedVmExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceStateChangeNotifyPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceStopExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstanceVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmInstantiateResourceException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmNicInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmNicVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmNicVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmOnIncorrectHostEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmReleaseResourceExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmResourceInstantiationChain.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vm\VmTracerCanonicalEvents.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\EO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\ForeignKey.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\Index.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\NoView.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\SoftDeletionCascade.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\SoftDeletionCascades.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\Uuid.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\vo\VoAspect.aj
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIAttachDataVolumeToVmEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIAttachDataVolumeToVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIBackupDataVolumeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIBackupDataVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIChangeVolumeStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIChangeVolumeStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateDataVolumeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateDataVolumeFromVolumeSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateDataVolumeFromVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateDataVolumeFromVolumeTemplateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateDataVolumeFromVolumeTemplateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateDataVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateVolumeSnapshotEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APICreateVolumeSnapshotMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIDeleteDataVolumeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIDeleteDataVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIDetachDataVolumeFromVmEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIDetachDataVolumeFromVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIGetDataVolumeAttachableVmMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIGetDataVolumeAttachableVmReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIGetVolumeFormatMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIGetVolumeFormatReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIGetVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIGetVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIListVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIListVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIQueryVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIQueryVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APISearchVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APISearchVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIUpdateVolumeEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\APIUpdateVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\CreateDataVolumeTemplateFromDataVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\CreateDataVolumeTemplateFromDataVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\CreateVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\CreateVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\DeleteVolumeMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\DeleteVolumeReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\MaxDataVolumeNumberExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\Volume.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeDeletionExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeDeletionStruct.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeFormat.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeReportPrimaryStorageCapacityUsageMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeReportPrimaryStorageCapacityUsageReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeStatus.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\volume\VolumeVO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIChangeZoneStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIChangeZoneStateMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APICreateZoneEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APICreateZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIDeleteZoneEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIDeleteZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIGetZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIGetZoneReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIListZonesMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIListZonesReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIQueryZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIQueryZoneReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APISearchZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APISearchZoneReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIUpdateZoneEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\APIUpdateZoneMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\Zone.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneAO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneAO_.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneChangeStateExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneConstant.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneDeleteExtensionPoint.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneDeletionMsg.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneDeletionReply.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneEO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneException.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneFactory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneInventory.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneMessage.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneState.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneStateEvent.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneType.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneVO.java
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneVO_.java
+---- Full Classpath ---
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\resources.jar(3487757 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\rt.jar(63190143 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\sunrsasign.jar(missing)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\jsse.jar(620251 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\jce.jar(114708 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\charsets.jar(3086224 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\jfr.jar(555272 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\classes(missing)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-aspects\4.0.3.RELEASE\spring-aspects-4.0.3.RELEASE.jar(52373 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\access-bridge-64.jar(188287 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\cldrdata.jar(3860522 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\dnsns.jar(8286 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\jaccess.jar(44115 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\jfxrt.jar(18131398 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\localedata.jar(2248141 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\nashorn.jar(2008813 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\sunec.jar(39773 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\sunjce_provider.jar(278033 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\sunmscapi.jar(32654 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\sunpkcs11.jar(249387 bytes)
+C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext\zipfs.jar(68836 bytes)
+C:\Users\heidsoft\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar(102661 bytes)
+C:\Users\heidsoft\.m2\repository\com\rabbitmq\amqp-client\3.2.1\amqp-client-3.2.1.jar(359243 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\security\spring-security-core\3.2.3.RELEASE\spring-security-core-3.2.3.RELEASE.jar(359633 bytes)
+C:\Users\heidsoft\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar(105112 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-aspects\4.0.3.RELEASE\spring-aspects-4.0.3.RELEASE.jar(52373 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-tx\4.0.3.RELEASE\spring-tx-4.0.3.RELEASE.jar(248201 bytes)
+C:\Users\heidsoft\.m2\repository\org\aspectj\aspectjrt\1.6.12\aspectjrt-1.6.12.jar(116219 bytes)
+C:\Users\heidsoft\.m2\repository\org\aspectj\aspectjweaver\1.6.12\aspectjweaver-1.6.12.jar(1749970 bytes)
+D:\opensource\zstack\utils\target\utils-0.8.0.jar(121612 bytes)
+C:\Users\heidsoft\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar(4467 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-aop\4.0.3.RELEASE\spring-aop-4.0.3.RELEASE.jar(352700 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-beans\3.2.8.RELEASE\spring-beans-3.2.8.RELEASE.jar(612569 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-context\4.0.3.RELEASE\spring-context-4.0.3.RELEASE.jar(974938 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-core\3.2.8.RELEASE\spring-core-3.2.8.RELEASE.jar(873608 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-expression\3.2.8.RELEASE\spring-expression-3.2.8.RELEASE.jar(196367 bytes)
+C:\Users\heidsoft\.m2\repository\junit\junit\4.10\junit-4.10.jar(253160 bytes)
+C:\Users\heidsoft\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar(76643 bytes)
+C:\Users\heidsoft\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar(185140 bytes)
+C:\Users\heidsoft\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar(263965 bytes)
+C:\Users\heidsoft\.m2\repository\commons-configuration\commons-configuration\1.8\commons-configuration-1.8.jar(354491 bytes)
+C:\Users\heidsoft\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar(284220 bytes)
+C:\Users\heidsoft\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar(60686 bytes)
+C:\Users\heidsoft\.m2\repository\com\google\code\gson\gson\2.1\gson-2.1.jar(180110 bytes)
+C:\Users\heidsoft\.m2\repository\org\springframework\spring-web\4.0.3.RELEASE\spring-web-4.0.3.RELEASE.jar(667960 bytes)
+C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-api\2.1\log4j-api-2.1.jar(133531 bytes)
+C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-core\2.1\log4j-core-2.1.jar(824749 bytes)
+C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-web\2.1\log4j-web-2.1.jar(23607 bytes)
+C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-1.2-api\2.1\log4j-1.2-api-2.1.jar(36795 bytes)
+C:\Users\heidsoft\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.1\log4j-slf4j-impl-2.1.jar(22542 bytes)
+C:\Users\heidsoft\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar(29257 bytes)
+C:\Users\heidsoft\.m2\repository\org\codehaus\groovy\groovy\2.2.2\groovy-2.2.2.jar(3473476 bytes)
+C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-tree\4.1\asm-tree-4.1.jar(22162 bytes)
+C:\Users\heidsoft\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar(445288 bytes)
+C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-util\4.1\asm-util-4.1.jar(37599 bytes)
+C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-commons\4.1\asm-commons-4.1.jar(38090 bytes)
+C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm\4.1\asm-4.1.jar(47359 bytes)
+C:\Users\heidsoft\.m2\repository\org\ow2\asm\asm-analysis\4.1\asm-analysis-4.1.jar(19812 bytes)
+C:\Users\heidsoft\.m2\repository\org\json\json\20090211\json-20090211.jar(45944 bytes)
+C:\Users\heidsoft\.m2\repository\com\google\guava\guava\15.0\guava-15.0.jar(2172168 bytes)
+C:\Users\heidsoft\.m2\repository\com\googlecode\gentyref\gentyref\1.1.0\gentyref-1.1.0.jar(16854 bytes)
+C:\Users\heidsoft\.m2\repository\net\schmizz\sshj\0.8.1\sshj-0.8.1.jar(349526 bytes)
+C:\Users\heidsoft\.m2\repository\org\bouncycastle\bcprov-jdk16\1.46\bcprov-jdk16-1.46.jar(1876535 bytes)
+C:\Users\heidsoft\.m2\repository\commons-net\commons-net\3.3\commons-net-3.3.jar(280983 bytes)
+C:\Users\heidsoft\.m2\repository\commons-validator\commons-validator\1.4.0\commons-validator-1.4.0.jar(176897 bytes)
+C:\Users\heidsoft\.m2\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar(232019 bytes)
+C:\Users\heidsoft\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar(143602 bytes)
+D:\opensource\zstack\header\target\classes(3 entries)
+---- Compiler Messages ---
+warning bad version number found in C:\Users\heidsoft\.m2\repository\org\aspectj\aspectjrt\1.6.12\aspectjrt-1.6.12.jar expected 1.6.11 found 1.6.12
+info directory classpath entry does not exist: C:\Program Files\Java\jdk1.8.0_40\jre\lib\sunrsasign.jar
+info zipfile classpath entry does not exist: C:\Program Files\Java\jdk1.8.0_40\jre\classes
+info Pipelining compilation
+error at (no source information available)
+D:\opensource\zstack\header\src\main\java\org\zstack\header\zone\ZoneVO_.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:257)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.patterns.TypePattern.matchesSubtypes(TypePattern.java:178)
+	at org.aspectj.weaver.patterns.ExactTypePattern.matchesSubtypes(ExactTypePattern.java:74)
+	at org.aspectj.weaver.patterns.TypePattern.matchesStatically(TypePattern.java:130)
+	at org.aspectj.weaver.patterns.DeclareParents.match(DeclareParents.java:63)
+	at org.aspectj.weaver.patterns.DeclareParents.findMatchingNewParents(DeclareParents.java:358)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doDeclareParents(AjLookupEnvironment.java:880)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:730)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+
+abort ABORT -- (ClassFormatException) File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 15
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:424)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:376)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:467)
+	at org.aspectj.weaver.World.resolve(World.java:308)
+	at org.aspectj.weaver.World.resolve(World.java:218)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:97)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:810)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:257)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:624)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:76)
+	at org.aspectj.weaver.patterns.TypePattern.matchesSubtypes(TypePattern.java:178)
+	at org.aspectj.weaver.patterns.ExactTypePattern.matchesSubtypes(ExactTypePattern.java:74)
+	at org.aspectj.weaver.patterns.TypePattern.matchesStatically(TypePattern.java:130)
+	at org.aspectj.weaver.patterns.DeclareParents.match(DeclareParents.java:63)
+	at org.aspectj.weaver.patterns.DeclareParents.findMatchingNewParents(DeclareParents.java:358)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doDeclareParents(AjLookupEnvironment.java:880)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:730)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:652)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:427)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:213)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1021)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:405)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+
